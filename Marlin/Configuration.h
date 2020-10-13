@@ -1348,18 +1348,12 @@
  */
 #define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
-<<<<<<< HEAD
-  #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
-  #define FIL_RUNOUT_INVERTING true // Set to true to invert the logic of the sensor.
-  //#define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
-  //#define FIL_RUNOUT_PULLDOWN      // Use internal pulldown for filament runout pins.
-=======
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
->>>>>>> bugfix-2.0.x
+
 
   // Set one or more commands to execute on filament runout.
   // (After 'M412 H' Marlin will ask the host to handle the process.)
@@ -2391,14 +2385,6 @@
 //=============================================================================
 //=============================== Graphical TFTs ==============================
 //=============================================================================
-
-<<<<<<< HEAD
-//
-// FSMC display (MKS Robin, Alfawise U20, JGAurora A5S, REXYZ A1, etc.)
-//
-#define FSMC_GRAPHICAL_TFT
-//TFT SETUP DONE BY CHITU BOARD
-=======
 /**
  * TFT Type - Select your Display type
  *
@@ -2415,9 +2401,7 @@
  *   Resolution: TFT_WIDTH and TFT_HEIGHT
  *   Interface:  TFT_INTERFACE_FSMC or TFT_INTERFACE_SPI
  */
-//#define TFT_GENERIC
->>>>>>> bugfix-2.0.x
-
+#define TFT_TRONXY_X5SA
 /**
  * TFT UI - User Interface Selection. Enable one of the following options:
  *
@@ -2430,7 +2414,7 @@
  */
 //#define TFT_CLASSIC_UI
 //#define TFT_COLOR_UI
-//#define TFT_LVGL_UI
+#define TFT_LVGL_UI
 
 /**
  * TFT Rotation. Set to one of the following values:
@@ -2454,29 +2438,6 @@
 //
 // ADS7843/XPT2046 ADC Touchscreen such as ILI9341 2.8
 //
-<<<<<<< HEAD
-#define TOUCH_BUTTONS
-//DONE BY CHITU BOARD
-//#if ENABLED(TOUCH_BUTTONS)
-//  #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
-//  #define BUTTON_DELAY_MENU 250 // (ms) Button repeat delay for menus
-//
-//  #define XPT2046_X_CALIBRATION   12316
-//  #define XPT2046_Y_CALIBRATION  -8981
-//  #define XPT2046_X_OFFSET       -43
-//  #define XPT2046_Y_OFFSET        257
-//#endif
-
-// Change colors
-// some colors are predefined, see /src/lcd/dogm/u8g_dev_tft_480~.cpp Line 160
-// or use 16bit color (e.g. 0x0000 = black, 0xFFE0 = yellow)
-// see https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
-#define TFT_MARLINUI_COLOR COLOR_WHITE  // main foreground color
-#define TFT_MARLINBG_COLOR COLOR_BLACK  // background color
-#define TFT_BTCANCEL_COLOR COLOR_RED    // cancel button
-#define TFT_BTARROWS_COLOR COLOR_WHITE  // arrows up/down
-#define TFT_BTOKMENU_COLOR COLOR_GREEN  // enter button
-=======
 //#define TOUCH_SCREEN
 #if ENABLED(TOUCH_SCREEN)
   #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
@@ -2489,8 +2450,6 @@
   //#define XPT2046_X_OFFSET        -43
   //#define XPT2046_Y_OFFSET        257
 #endif
->>>>>>> bugfix-2.0.x
-
 //
 // RepRapWorld REPRAPWORLD_KEYPAD v1.1
 // https://reprapworld.com/products/electronics/ramps/keypad_v1_0_fully_assembled/
