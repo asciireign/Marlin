@@ -22,7 +22,7 @@
 #pragma once
 
 //JUST uncomment the option for your machine
-//#define V6_330_TITAN_TMC 1
+#define V6_330_TITAN_TMC 1
 //#define V6_330_TITAN_NO_TMC 1
 //  #define V6_330_NO_TITAN_TMC 1
 //#define V6_330_NO_TITAN_NO_TMC 1
@@ -71,7 +71,7 @@
   #define Y_BED_SIZE 330
   #define Z_MAX_POS 400
   #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6"
-  
+
 #elif V6_400_TITAN_TMC
   #define MOTHERBOARD BOARD_CHITU3D_V6
   #define WITH_TMC 1
@@ -1197,7 +1197,7 @@
 // Enable the M48 repeatability test to test probe accuracy
 #ifndef XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
 #define Z_MIN_PROBE_REPEATABILITY_TEST
-#endif 
+#endif
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
